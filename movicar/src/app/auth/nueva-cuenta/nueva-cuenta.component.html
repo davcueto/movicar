@@ -1,0 +1,61 @@
+<div nz-row class="content-row">
+    <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="14" nzXl="14">
+        <app-header></app-header>
+        <div class="label-crear-cuenta">Crear cuenta</div>
+        <div class="content-label-bienvenida">
+            <div class="label-bienvenida">Te damos la bienvenida a la forma más fácil y accesible de estrenar un auto
+            </div>
+        </div>
+        <div class="content-form-inputs">
+            <form [formGroup]="validationForm" (ngSubmit)="onSubmit()">
+                <mdb-form-control class="content-input">
+                    <input mdbValidate mdbInput type="email" id="form1" class="form-control input-field" formControlName="email" required />
+                    <i nz-icon nzType="close" nzTheme="outline" class="icon-close" *ngIf="(email?.dirty)" (click)="resetEmail()"></i>
+                    <label mdbLabel class="form-label input-label" for="form1">Correo electrónico</label>
+                    <mdb-error class="error-label" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+                        <div class="content-error">
+                            <i nz-icon nzType="exclamation-circle" nzTheme="fill" class="icon-error"></i>
+                            <span class="label-error">Ingresa un correo válido</span>
+                        </div>
+                    </mdb-error>
+                </mdb-form-control>
+                <mdb-form-control class="content-input">
+                    <input mdbValidate mdbInput [type]="showpassword ? 'text' : 'password'" id="form2" class="form-control input-field" formControlName="password" required />
+                    <i nz-icon nzType="eye-invisible" nzTheme="outline" class="icon-password" *ngIf="showpassword" (click)="showPassword()"></i>
+                    <i nz-icon nzType="eye" nzTheme="outline" class="icon-password" *ngIf="!showpassword" (click)="showPassword()"></i>
+                    <label mdbLabel class="form-label input-label" for="form2">Crea tu contraseña</label>
+                    <mdb-error class="error-label" *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+                        <div class="content-error">
+                            <i nz-icon nzType="exclamation-circle" nzTheme="fill" class="icon-error"></i>
+                            <span class="label-error">Este campo es requerido</span>
+                        </div>
+                    </mdb-error>
+                </mdb-form-control>
+                <mdb-form-control class="content-input">
+                    <input mdbValidate mdbInput type="number" id="form3" class="form-control input-field" formControlName="number" required />
+                    <i nz-icon nzType="close" nzTheme="outline" class="icon-close" *ngIf="(number?.dirty)" (click)="resetNumber()"></i>
+                    <label mdbLabel class="form-label input-label" for="form3">Celular</label>
+                    <mdb-error class="error-label" *ngIf="number?.invalid && (number?.dirty || number?.touched)">
+                        <div class="content-error">
+                            <i nz-icon nzType="exclamation-circle" nzTheme="fill" class="icon-error"></i>
+                            <span class="label-error">Este campo es requerido</span>
+                        </div>
+                    </mdb-error>
+                </mdb-form-control>
+                <div>
+                    <label class="b-contain">
+                        <span>Acepto los <span class="terminos">Términos, Condiciones y Políticas de Privacidad</span></span>
+                        <input type="checkbox">
+                        <div class="b-input"></div>
+                    </label>
+                </div>
+                <button nz-button nzType="primary" type="submit" class="btn-submit">Crear cuenta</button>
+            </form>
+        </div>
+        <app-footer></app-footer>
+    </div>
+
+    <div nz-col nzXs="0" nzSm="0" nzMd="0" nzLg="10" nzXl="10">
+        <img nz-image nzSrc="../../../assets/images/img_1.png" alt="" style="width: 100%; height: 100%;" />
+    </div>
+</div>

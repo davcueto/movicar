@@ -1,0 +1,121 @@
+.content {
+    height: 100%;
+}
+
+.content-verify {
+    text-align: center
+}
+
+.label-ingresar-codigo {
+    font-family: 'openSans-regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 40px;
+    text-align: center;
+    color: #0A2240;
+    width: 587px;
+    margin: auto;
+    margin-top: 144px;
+}
+
+.label-number {
+    font-family: 'openSans-regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #9AA0A4;
+    margin-top: 56px;
+}
+
+.label-cambiar-numero {
+    font-family: 'openSans-regular';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #415364;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+.content-inputs {
+    text-align: center;
+    margin-top: 56px;
+}
+
+.content-input {
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+    text-align: center;
+    height: 60px;
+    width: 40px;
+    border-radius: 10px;
+    margin: 0 4px;
+    font-size: 16px;
+    background: #ECF1F4;
+    margin: 0 12px;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+::placeholder {
+    font-family: 'openSans-regular';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #9AA0A4;
+    position: absolute;
+    left: 16px;
+    top: 18px;
+}
+
+.label-reenviar-numero {
+    font-family: 'openSans-regular';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #415364;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+.btn-submit-active {
+    width: 332px;
+    height: 64px;
+    border-radius: 10px;
+    background: #8AE0B0;
+    color: #0A2240;
+    font-family: 'openSans-regular';
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.btn-submit-inactive {
+    width: 332px;
+    height: 64px;
+    border-radius: 10px;
+    background: #ECF1F4;
+    color: #9AA0A4;
+    font-family: 'openSans-regular';
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+    margin-top: 40px;
+}
