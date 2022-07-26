@@ -1,6 +1,10 @@
-.content-border-header {
+.content-border-header-1 {
     height: 56px;
     border-bottom: 2px solid #E5E5E5;
+}
+
+.content-border-header-2 {
+    height: 56px;
 }
 
 .content-logo {
@@ -8,7 +12,7 @@
     margin-top: 16px;
 }
 
-.label-iniciar-sesion {
+.label-iniciar-sesion-1 {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -16,6 +20,19 @@
     text-align: right;
     text-decoration-line: underline;
     color: #0A2240;
+    cursor: pointer;
+    margin-right: 41px;
+    margin-top: 16px;
+}
+
+.label-iniciar-sesion-2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    text-decoration-line: underline;
+    color: #FFFFFF;
     cursor: pointer;
     margin-right: 41px;
     margin-top: 16px;

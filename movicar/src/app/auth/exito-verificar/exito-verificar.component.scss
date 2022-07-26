@@ -1,0 +1,118 @@
+.content1 {
+    background: #0A2240;
+    height: 100%;
+}
+
+.content2 {
+    height: auto;
+}
+
+@media screen and (max-width: 767px) {
+    .content2 {
+        height: 98%;
+    }
+}
+
+.column1 {
+    position: absolute;
+    bottom: 90px;
+}
+
+.column2 {
+    text-align: center;
+    width: 100%;
+}
+
+.column3 {
+    text-align: right;
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 767px) {
+    .column3 {
+        text-align: left;
+        bottom: 90px;
+        position: absolute;
+    }
+}
+
+.label-1 {
+    font-family: 'openSans-regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 80px;
+}
+
+.label-2 {
+    font-family: 'openSans-regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 24px auto;
+    width: 379px;
+}
+
+.content-labels {
+    width: fit-content;
+    text-align: left;
+    margin: auto;
+}
+
+.spaces-labels {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.label-3 {
+    font-family: 'openSans-ligth';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+
+.label-4 {
+    font-family: 'openSans-regular';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 24px auto;
+    width: 379px;
+}
+
+.btn-submit {
+    width: 332px;
+    height: 64px;
+    border-radius: 10px;
+    background: #8AE0B0;
+    color: #0A2240;
+    font-family: 'openSans-regular';
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.label-5 {
+    font-family: 'openSans-regular';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #D7DCDF;
+    margin-top: 40px;
+}

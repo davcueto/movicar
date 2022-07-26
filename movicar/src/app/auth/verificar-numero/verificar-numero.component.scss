@@ -16,7 +16,14 @@
     color: #0A2240;
     width: 587px;
     margin: auto;
-    margin-top: 144px;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .label-ingresar-codigo {
+        font-size: 18px;
+        width: 379px;
+    }
 }
 
 .label-number {

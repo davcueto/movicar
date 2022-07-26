@@ -1,5 +1,5 @@
-<div class="content">
-    <app-header></app-header>
+<app-header></app-header>
+<div>
     <div nz-row>
         <div nz-col nzSpan="24">
             <div class="content-verify">
@@ -7,29 +7,18 @@
                 <div class="label-number">{{numberInParam}}</div>
                 <div class="label-cambiar-numero">Cambiar número</div>
                 <div class="content-inputs">
-                    <input 
-                        type="text" 
-                        inputMode="numeric" 
-                        placeholder="0" 
-                        maxLength="1" 
-                        class="content-input"
-                        *ngFor="let n of [0,1,2,3]; let index=index;" 
-                        (keyup)="valuechange($event, index)"
-                    />
+                    <input type="text" inputMode="numeric" placeholder="0" maxLength="1" class="content-input"
+                        *ngFor="let n of [0,1,2,3]; let index=index;" (keyup)="valuechange($event, index)" />
                 </div>
                 <div class="label-reenviar-numero">Reenviar código</div>
-                <button 
-                    nz-button 
-                    nzType="primary" 
-                    type="submit" 
-                    [ngClass]="{'btn-submit-active': !disabledBtn, 'btn-submit-inactive': disabledBtn }" 
-                    [disabled]="disabledBtn"
-                    (click)="btnCrear()">
-                <span *ngIf="!showprogress">Crear cuenta</span>
-                <nz-spin nzSimple *ngIf="showprogress"></nz-spin>
+                <button nz-button nzType="primary" type="submit"
+                    [ngClass]="{'btn-submit-active': !disabledBtn, 'btn-submit-inactive': disabledBtn }"
+                    [disabled]="disabledBtn" (click)="btnCrear()">
+                    <span *ngIf="!showprogress">Crear cuenta</span>
+                    <nz-spin nzSimple *ngIf="showprogress"></nz-spin>
                 </button>
             </div>
         </div>
     </div>
-    <app-footer></app-footer>
 </div>
+<app-footer></app-footer>

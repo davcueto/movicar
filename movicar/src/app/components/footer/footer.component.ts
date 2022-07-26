@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  @Input()
+  type: any;
+  typeClass = 1;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.typeClass = this.type != undefined ? this.type : this.typeClass;
   }
 
 }

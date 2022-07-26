@@ -1,10 +1,10 @@
-<div class="content-border-header">
+<div [ngClass]="{'content-border-header-1': typeClass === 1, 'content-border-header-2': typeClass === 2 }">
     <div nz-row>
         <div nz-col nzXs="12" nzSm="12" nzMd="12" nzLg="12" nzXl="12">
-            <img nz-image nzSrc="../../../assets/images/img_2.png" class="content-logo" alt="" />
+            <img nz-image nzSrc={{pathImg}} class="content-logo" alt="" />
         </div>
         <div nz-col nzXs="12" nzSm="12" nzMd="12" nzLg="12" nzXl="12">
-            <div class="label-iniciar-sesion">Iniciar sesión</div>
+            <div [ngClass]="{'label-iniciar-sesion-1': typeClass === 1, 'label-iniciar-sesion-2': typeClass === 2 }">Iniciar sesión</div>
         </div>
     </div>
 </div>
