@@ -4,6 +4,7 @@ import { AuthComponent } from "./auth.component";
 import { LoginComponent } from "./login/login.component";
 import { NuevaCuentaComponent } from './nueva-cuenta/nueva-cuenta.component';
 import { VerificarNumeroComponent } from './verificar-numero/verificar-numero.component';
+import { ExitoVerificarComponent } from './exito-verificar/exito-verificar.component';
 
 const routes: Routes = [
   { 
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: 'verificar-numero/:number',
         component: VerificarNumeroComponent
+      },
+      {
+        path: 'exito-verificar',
+        component: ExitoVerificarComponent
       }
     ] 
   },

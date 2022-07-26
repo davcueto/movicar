@@ -26,6 +26,7 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { VerificarNumeroComponent } from './verificar-numero/verificar-numero.component';
+import { ExitoVerificarComponent } from './exito-verificar/exito-verificar.component';
 
 
 
@@ -36,7 +37,8 @@ import { VerificarNumeroComponent } from './verificar-numero/verificar-numero.co
     NuevaCuentaComponent,
     HeaderComponent,
     FooterComponent,
-    VerificarNumeroComponent
+    VerificarNumeroComponent,
+    ExitoVerificarComponent
   ],
   imports: [
     CommonModule,

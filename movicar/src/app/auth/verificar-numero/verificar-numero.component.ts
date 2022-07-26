@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-verificar-numero',
@@ -15,7 +15,8 @@ export class VerificarNumeroComponent implements OnInit, OnDestroy {
   showprogress = false;
 
   constructor(
-    private _Activatedroute: ActivatedRoute
+    private _Activatedroute: ActivatedRoute,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -54,6 +55,7 @@ export class VerificarNumeroComponent implements OnInit, OnDestroy {
     this.disabledBtn = true;
     setTimeout(() => {
       this.showprogress = false;
+      this.router.navigate(['./auth/exito-verificar']);
     }, 4000);
   }
 
