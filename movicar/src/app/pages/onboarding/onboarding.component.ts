@@ -7,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OnboardingComponent implements OnInit {
 
-  ineFront: any;
+  ineFront: any = "";
   progressIneFront: any = false;
   ineFrontDetail: any = false;
 
-  ineBack: any;
+  ineBack: any = "";
   progressIneBack: any = false;
   ineBackDetail: any = false;
 
-  picture: any;
+  picture: any = "";
   progressPicture: any = false;
   pictureDetail: any = false;
 
@@ -36,7 +36,7 @@ export class OnboardingComponent implements OnInit {
           this.progressIneFront = false;
           this.ineFrontDetail = true;
           this.validPhotos();
-        }, 4000);
+        }, 1000);
       }
       reader.readAsDataURL(event.target.files[0]);
     }
@@ -48,11 +48,11 @@ export class OnboardingComponent implements OnInit {
       reader.onload = (event: any) => {
         this.progressIneBack = true;
         setTimeout(() => {
-          this.ineFront = event.target.result;
+          this.ineBack = event.target.result;
           this.progressIneBack = false;
           this.ineBackDetail = true;
           this.validPhotos();
-        }, 4000);
+        }, 1000);
       }
       reader.readAsDataURL(event.target.files[0]);
     }
@@ -64,22 +64,21 @@ export class OnboardingComponent implements OnInit {
       reader.onload = (event: any) => {
         this.progressPicture = true;
         setTimeout(() => {
-          this.ineFront = event.target.result;
+          this.picture = event.target.result;
           this.progressPicture = false;
           this.pictureDetail = true;
           this.validPhotos();
-        }, 4000);
+        }, 1000);
       }
       reader.readAsDataURL(event.target.files[0]);
     }
   }
 
   validPhotos() {
-    console.log("aqui")
-    console.log(this.ineFront,this.ineBack,this.picture)
-    if(this.ineFront != undefined && this.ineBack != undefined && this.picture != undefined){
-      console.log("dentro")
+    if(this.ineFrontDetail && this.ineBackDetail && this.pictureDetail){
       this.disabledBtn = false;
+    }else{
+      this.disabledBtn = true;
     }
   }
 
