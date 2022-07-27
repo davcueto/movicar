@@ -1,0 +1,122 @@
+<app-header></app-header>
+<div nz-row>
+    <div nz-col nzSpan="24">
+        <div>
+            <div class="label-1">Validemos tu identidad</div>
+            <div class="label-2">Sube tu INE y tómate una foto</div>
+            <div class="content-upload">
+                <div [ngClass]="{'content-text-upload': !ineFrontDetail, 'content-text-detail': ineFrontDetail }">
+                    <div *ngIf="!progressIneFront && !ineFrontDetail">
+                        <i nz-icon nzType="cloud-upload" nzTheme="outline"></i>
+                        <span class="label-3" onclick="document.getElementById('getFileIneFront').click()">Sube el frente de tu INE</span>
+                        <input type='file' id="getFileIneFront" style="display:none" (change)="handleUploadIneFront($event)">
+                    </div>
+                    <div *ngIf="progressIneFront" class="content-progress">
+                        <nz-spin nzSimple></nz-spin>
+                        <span class="label-4">Subiendo</span>
+                    </div>
+                    <div *ngIf="ineFrontDetail && !progressIneFront">
+                        <div nz-row>
+                            <div nz-col nzSpan="5">
+                                <img
+                                    nz-image
+                                    width="64px"
+                                    height="64px"
+                                    nzSrc="{{ineFront}}"
+                                    alt=""
+                                    class="content-img"
+                                />
+                            </div>
+                            <div nz-col nzSpan="17">
+                                <div class="label-5">Texto</div>
+                                <div class="label-6">Reemplazar</div>
+                            </div>
+                            <div nz-col nzSpan="2">
+                                <i nz-icon nzType="check-circle" nzTheme="fill" class="icon-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-upload">
+                <div [ngClass]="{'content-text-upload': !ineBackDetail, 'content-text-detail': ineBackDetail }">
+                    <div *ngIf="!progressIneBack && !ineBackDetail">
+                        <i nz-icon nzType="cloud-upload" nzTheme="outline"></i>
+                        <span class="label-3" onclick="document.getElementById('getFileIneBack').click()">Sube el reverso de tu INE</span>
+                        <input type='file' id="getFileIneBack" style="display:none" (change)="handleUploadIneBack($event)">
+                    </div>
+                    <div *ngIf="progressIneBack" class="content-progress">
+                        <nz-spin nzSimple></nz-spin>
+                        <span class="label-4">Subiendo</span>
+                    </div>
+                    <div *ngIf="ineBackDetail && !progressIneBack">
+                        <div nz-row>
+                            <div nz-col nzSpan="5">
+                                <img
+                                    nz-image
+                                    width="64px"
+                                    height="64px"
+                                    nzSrc="{{ineFront}}"
+                                    alt=""
+                                    class="content-img"
+                                />
+                            </div>
+                            <div nz-col nzSpan="17">
+                                <div class="label-5">Texto</div>
+                                <div class="label-6">Reemplazar</div>
+                            </div>
+                            <div nz-col nzSpan="2">
+                                <i nz-icon nzType="check-circle" nzTheme="fill" class="icon-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-upload">
+                <div [ngClass]="{'content-text-upload': !pictureDetail, 'content-text-detail': pictureDetail }">
+                    <div *ngIf="!progressPicture && !pictureDetail">
+                        <i nz-icon nzType="cloud-upload" nzTheme="outline"></i>
+                        <span class="label-3" onclick="document.getElementById('getFilePicture').click()">Tómate una foto de frente</span>
+                        <input type='file' id="getFilePicture" style="display:none" (change)="handleUploadPicture($event)">
+                    </div>
+                    <div *ngIf="progressPicture" class="content-progress">
+                        <nz-spin nzSimple></nz-spin>
+                        <span class="label-4">Subiendo</span>
+                    </div>
+                    <div *ngIf="pictureDetail && !progressPicture">
+                        <div nz-row>
+                            <div nz-col nzSpan="5">
+                                <img
+                                    nz-image
+                                    width="64px"
+                                    height="64px"
+                                    nzSrc="{{ineFront}}"
+                                    alt=""
+                                    class="content-img"
+                                />
+                            </div>
+                            <div nz-col nzSpan="17">
+                                <div class="label-5">Texto</div>
+                                <div class="label-6">Reemplazar</div>
+                            </div>
+                            <div nz-col nzSpan="2">
+                                <i nz-icon nzType="check-circle" nzTheme="fill" class="icon-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-btn">
+                <button 
+                    nz-button 
+                    nzType="primary" 
+                    type="submit" 
+                    [ngClass]="{'btn-submit-active': !disabledBtn, 'btn-submit-inactive': disabledBtn }"
+                    [disabled]="disabledBtn" 
+                    (click)="btnCrear()"
+                >Crear cuenta</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

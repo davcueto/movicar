@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from "./../shared.module";
+import { SharedModuleC } from '../sharedcomponents.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
 import { LoginComponent } from './login/login.component';
 import { NuevaCuentaComponent } from './nueva-cuenta/nueva-cuenta.component';
-import { HeaderComponent } from '../components/header/header.component';
-import { FooterComponent } from '../components/footer/footer.component';
 
 
 import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
@@ -35,15 +34,15 @@ import { ExitoVerificarComponent } from './exito-verificar/exito-verificar.compo
     AuthComponent,
     LoginComponent,
     NuevaCuentaComponent,
-    HeaderComponent,
-    FooterComponent,
     VerificarNumeroComponent,
-    ExitoVerificarComponent
+    ExitoVerificarComponent,
+    
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     SharedModule,
+    SharedModuleC,
     FormsModule,
     ReactiveFormsModule,
 
