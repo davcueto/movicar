@@ -1,1 +1,48 @@
-<p>feedback works!</p>
+<span *ngIf="randomeFeedback == 1">
+    <div class="content1">
+        <app-header [type]="2"></app-header>
+        <div nz-row>
+            <div nz-col nzSpan="24">
+                <div>
+                    <div class="label-1">¡Felicidades!</div>
+                    <div class="label-2">Tu solicitud ha sido pre-autorizada por una renta mensual de: $7,000.00 MXN</div>
+                    <div class="label-3">Tenemos las siguientes opciones para ti, selecciona tu favorita:</div>
+                    <nz-card [nzBordered]="false" [nzBodyStyle]="{padding: '0'}" class="content-card" *ngFor="let element of arrayOpcionesCar;">
+                        <div nz-row>
+                            <div nz-col nzSpan="5">
+                                <img nz-image width="82px" height="42px" nzSrc="{{element.imgPath}}"  alt="" class="content-img" />
+                            </div>
+                            <div nz-col nzSpan="17">
+                                <div class="label-4">{{element.marcaAuto}}</div>
+                                <div class="label-5">{{element.renta}}</div>
+                            </div>
+                            <div nz-col nzSpan="2">
+                                <i nz-icon nzType="right" nzTheme="outline" class="icon-arrow"></i>
+                            </div>
+                        </div>
+                    </nz-card>
+                    <div class="label-6">Si estás buscando algún otro modelo, elige un auto dentro del rango que te autorizamos en nuestro catálogo.</div>
+                    <div class="label-7">Consultar catálogo</div>
+                </div>
+            </div>
+        </div>
+        <app-footer [type]="2"></app-footer>
+    </div>
+</span>
+<span *ngIf="randomeFeedback == 2">
+    <app-header></app-header>
+    <div nz-row>
+        <div nz-col nzSpan="24">
+            <div>
+                <div class="label-8">Lo sentimos...</div>
+                <div class="label-9">Con la información que nos proporcionaste no fue aprobada tu solicitud.</div>
+                <div class="label-10">O bien intenta con otra cuenta</div>
+                <div class="label-11">Intentar con otra cuenta bancaria</div>
+                <div class="content-img-2">
+                    <img nz-image width="282px" height="282px" nzSrc="../../../assets/images/img_11.png"  alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</span>

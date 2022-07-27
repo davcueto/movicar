@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-onboarding',
@@ -21,7 +22,9 @@ export class OnboardingComponent implements OnInit {
 
   disabledBtn: any = true;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -83,7 +86,7 @@ export class OnboardingComponent implements OnInit {
   }
 
   btnCrear() {
-
+    this.router.navigate(['./pages/feedback']);
   }
 
 }
